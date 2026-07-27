@@ -1,0 +1,28 @@
+[package]
+name = "driver_backup"
+version = "1.0.0"
+edition = "2021"
+description = "Windows 驅動程式匯出/匯入工具"
+build = "build.rs"
+
+[[bin]]
+name = "driver_backup"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.27"
+egui = "0.27"
+rfd = "0.14"
+chrono = "0.4"
+walkdir = "2"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52"
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
