@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建置 – DriverBackup</title><meta name="description" content="Windows 驅動程式匯出／匯入工具，使用內建 pnputil.exe，以 Rust 與 egui 製作"><link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a class="brand" href="index.html">💾 DriverBackup</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="how.html">運作原理</a><a href="build.html">建置</a></nav></header><main>
+<h1>建置</h1><p>需要 Rust 工具鏈與 Cargo，目標平台為 Windows。</p>
+<pre><code>cargo build --release
+.\target\release\driver_backup.exe</code></pre>
+<p>相依套件：eframe / egui 0.27、rfd、chrono、walkdir、winreg。建置時 <code>build.rs</code> 會用 winres 嵌入要求系統管理員的 manifest；release 設定為 LTO 並移除符號。介面字型使用 repo 內的 <code>msjh.ttf</code>（微軟正黑體）。</p>
+<p>repo 預設分支為 <code>V1.0</code>，另有 <code>V1.0-Noico</code> 標籤。</p>
+</main><footer>MIT 授權條款 · 僅支援 Windows 10 / 11 · <a href="https://github.com/neil289506-commits/DriverBackup">GitHub</a></footer><script src="js/main.js"></script></body></html>

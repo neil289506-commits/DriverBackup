@@ -1,0 +1,22 @@
+:root{--bg:#0f1720;--panel:#16222f;--text:#e8f0f8;--muted:#92a8bd;--accent:#38bdf8;--line:#233447}
+@media (prefers-color-scheme:light){:root{--bg:#f2f7fc;--panel:#fff;--text:#0c2133;--muted:#4f6a82;--accent:#0369a1;--line:#d4e2ee}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,"Microsoft JhengHei",sans-serif}
+header{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--line);z-index:5}
+nav{max-width:980px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:10px 20px}
+nav .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);text-decoration:none;margin-right:auto}
+nav .brand img{width:32px;height:32px}nav a{color:var(--muted);text-decoration:none}nav a:hover,nav a.on{color:var(--accent)}
+main{max-width:980px;margin:auto;padding:32px 20px}
+.hero{text-align:center;padding:40px 0 24px}.hero img.logo{width:112px;height:112px}
+.hero h1{font-size:2.6rem;margin:10px 0 4px}.hero p{color:var(--muted);max-width:660px;margin:8px auto}
+.btn{display:inline-block;margin:8px 6px;padding:10px 22px;border-radius:8px;background:var(--accent);color:#04202e;font-weight:700;text-decoration:none}
+.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.shot{width:100%;border-radius:10px;border:1px solid var(--line);margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{margin:0 0 4px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.93rem}
+h2{margin-top:40px;border-bottom:1px solid var(--line);padding-bottom:6px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+code,pre{background:var(--panel);border:1px solid var(--line);border-radius:6px}code{padding:1px 6px}pre{padding:12px;overflow-x:auto}pre code{border:0;padding:0}
+.note{border-left:4px solid var(--accent);padding:8px 14px;background:var(--panel);margin:16px 0}
+footer{text-align:center;color:var(--muted);padding:32px 20px;font-size:.85rem}footer a,main a{color:var(--accent)}
+.hero .lock{font-size:72px;line-height:1}

@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>首頁 – DriverBackup</title>
+  <meta name="description" content="Windows 驅動程式匯出／匯入工具，使用內建 pnputil.exe，以 Rust 與 egui 製作">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="brand" href="index.html">💾 DriverBackup</a>
+    <a href="index.html">首頁</a>
+    <a href="usage.html">使用方式</a>
+    <a href="how.html">運作原理</a>
+    <a href="build.html">建置</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="lock">💾</div>
+
+    <h1>DriverBackup</h1>
+
+    <p>
+      Windows 桌面工具，匯出與匯入第三方裝置驅動程式。
+      使用系統內建的 <code>pnputil.exe</code>
+      備份驅動程式存放區，並從 <code>.inf</code> 還原。
+      以 Rust 與 egui 製作。
+    </p>
+
+    <a class="btn" href="usage.html">使用方式</a>
+
+    <a class="btn alt" href="how.html">運作原理</a>
+
+    <a class="btn" href="https://github.com/neil289506-commits/DriverBackup/releases/latest/download/driver_backup.exe">
+      ⬇ 下載 driver_backup.exe
+    </a>
+
+    <a class="btn alt" href="https://github.com/neil289506-commits/DriverBackup/releases/latest">
+      GitHub Releases
+    </a>
+
+  </section>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>匯出全部第三方驅動</h3>
+      <p>一次匯出到你選的資料夾。</p>
+    </div>
+
+    <div class="card">
+      <h3>sys.session 紀錄</h3>
+      <p>記錄 Windows 版本、匯出時間、驅動總數與完整清單。</p>
+    </div>
+
+    <div class="card">
+      <h3>單檔或整個資料夾匯入</h3>
+      <p>可選單一 <code>.inf</code>，或遞迴掃描整個資料夾。</p>
+    </div>
+
+    <div class="card">
+      <h3>重複偵測</h3>
+      <p>匯入前比對已安裝的驅動，由你決定覆寫或略過。</p>
+    </div>
+
+    <div class="card">
+      <h3>深色介面</h3>
+      <p>兩個分頁：匯出驅動、匯入驅動。</p>
+    </div>
+
+    <div class="card">
+      <h3>自動要求系統管理員</h3>
+      <p>執行檔內嵌 manifest，啟動時要求提升權限。</p>
+    </div>
+
+  </div>
+
+  <div class="note">
+    本工具直接操作 Windows 驅動程式存放區，
+    適合進階使用者與 IT 管理員，請謹慎使用。
+  </div>
+
+</main>
+
+<footer>
+  MIT 授權條款 · 僅支援 Windows 10 / 11 ·
+  <a href="https://github.com/neil289506-commits/DriverBackup">GitHub</a>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
