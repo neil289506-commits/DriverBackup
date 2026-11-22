@@ -1,14 +1,8 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>運作原理 – DriverBackup</title><meta name="description" content="Windows 驅動程式匯出／匯入工具，使用內建 pnputil.exe，以 Rust 與 egui 製作"><link rel="stylesheet" href="css/style.css"></head><body>
-<header><nav><a class="brand" href="index.html">💾 DriverBackup</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="how.html">運作原理</a><a href="build.html">建置</a></nav></header><main>
-<h1>運作原理</h1><table>
-<tr><th>動作</th><th>實際呼叫</th></tr>
-<tr><td>匯出</td><td><code>pnputil /export-driver * &lt;資料夾&gt;</code></td></tr>
-<tr><td>列出已安裝驅動</td><td><code>pnputil /enum-drivers</code></td></tr>
-<tr><td>安裝</td><td><code>pnputil /add-driver &lt;inf&gt; /install</code></td></tr>
-<tr><td>覆寫時移除舊驅動</td><td><code>pnputil /delete-driver &lt;oemNN.inf&gt; /uninstall /force</code></td></tr></table>
-<h2>重複偵測的方式</h2>
-<p>匯入前，程式把每個 <code>.inf</code> 的檔名，與已安裝驅動的「原始名稱」做不分大小寫比對。所以判斷依據是<strong>檔名</strong>，不是驅動版本。</p>
-<div class="note">選擇覆寫時，會先以 <code>/uninstall /force</code> 刪除舊驅動，再安裝新的。請確認要覆寫的是正確的驅動。</div>
-<h2>sys.session</h2><p>純文字紀錄，內容包含 Windows 版本、匯出時間、驅動總數與驅動列表（每個驅動的 INF 檔名）。</p>
-</main><footer>MIT 授權條款 · 僅支援 Windows 10 / 11 · <a href="https://github.com/neil289506-commits/DriverBackup">GitHub</a></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>運作原理 · DriverBackup</title><meta name="description" content="Windows 桌面工具,匯出與匯入第三方裝置驅動程式,以 Rust 與 egui 製作"><link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body data-repo="neil289506-commits/DriverBackup"><canvas id="bg" data-mode="grid"></canvas><div class="vignette"></div><div class="glow"></div>
+<nav><a class="logo" href="index.html"><img src="assets/logo.svg" alt="">DriverBackup</a><a class="l" href="index.html">首頁</a><a class="l" href="usage.html">使用方式</a><a class="l on" href="how.html">運作原理</a><a class="l" href="build.html">建置</a><a class="gh" href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">GitHub ↗</a><a class="dl" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 最新版 <span class="vt" data-tag></span></a></nav>
+<section class="page-h"><span class="badge"><i></i>How it works</span><h1 style="font-size:clamp(2.2rem,5vw,4rem);margin-top:16px"><span class="g">運作</span>原理</h1><p class="lead">所有動作都交給系統內建的 pnputil.exe。</p></section>
+<section style=padding-top:20px><h2 class="reveal">實際呼叫</h2><div class="panel reveal"><table><tr><th>動作</th><th>實際呼叫</th></tr><tr><td>匯出</td><td><code>pnputil /export-driver * &lt;資料夾&gt;</code></td></tr><tr><td>列出已安裝驅動</td><td><code>pnputil /enum-drivers</code></td></tr><tr><td>安裝</td><td><code>pnputil /add-driver &lt;inf&gt; /install</code></td></tr><tr><td>覆寫時移除舊驅動</td><td><code>pnputil /delete-driver &lt;oemNN.inf&gt; /uninstall /force</code></td></tr></table></div></section><section><h2 class="reveal">重複偵測的方式</h2><div class="panel reveal"><p>匯入前,程式把每個 <code>.inf</code> 的檔名,與已安裝驅動的「原始名稱」做不分大小寫比對。所以判斷依據是<strong>檔名</strong>,不是驅動版本。</p></div><div class="note reveal">選擇覆寫時,會先以 <code>/uninstall /force</code> 刪除舊驅動,再安裝新的。請確認要覆寫的是正確的驅動。</div></section><section><h2 class="reveal">sys.session</h2><div class="panel reveal"><p>純文字紀錄,內容包含 Windows 版本、匯出時間、驅動總數與驅動列表(每個驅動的 INF 檔名)。</p></div></section>
+<footer><div class="g">DriverBackup</div><p>MIT 授權條款 · 僅支援 Windows 10 / 11 · 由 neil289506-commits 開發</p><p><a href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">原始碼</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">最新版本</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases" target="_blank" rel="noopener">所有 Releases</a></p></footer>
+<script src="js/fx.js"></script></body></html>

@@ -1,102 +1,17 @@
-
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <title>首頁 – DriverBackup</title>
-  <meta name="description" content="Windows 驅動程式匯出／匯入工具，使用內建 pnputil.exe，以 Rust 與 egui 製作">
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <nav>
-    <a class="brand" href="index.html">💾 DriverBackup</a>
-    <a href="index.html">首頁</a>
-    <a href="usage.html">使用方式</a>
-    <a href="how.html">運作原理</a>
-    <a href="build.html">建置</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="lock">💾</div>
-
-    <h1>DriverBackup</h1>
-
-    <p>
-      Windows 桌面工具，匯出與匯入第三方裝置驅動程式。
-      使用系統內建的 <code>pnputil.exe</code>
-      備份驅動程式存放區，並從 <code>.inf</code> 還原。
-      以 Rust 與 egui 製作。
-    </p>
-
-    <a class="btn" href="usage.html">使用方式</a>
-
-    <a class="btn alt" href="how.html">運作原理</a>
-
-    <a class="btn" href="https://github.com/neil289506-commits/DriverBackup/releases/latest/download/driver_backup.exe">
-      ⬇ 下載 driver_backup.exe
-    </a>
-
-    <a class="btn alt" href="https://github.com/neil289506-commits/DriverBackup/releases/latest">
-      GitHub Releases
-    </a>
-
-  </section>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>匯出全部第三方驅動</h3>
-      <p>一次匯出到你選的資料夾。</p>
-    </div>
-
-    <div class="card">
-      <h3>sys.session 紀錄</h3>
-      <p>記錄 Windows 版本、匯出時間、驅動總數與完整清單。</p>
-    </div>
-
-    <div class="card">
-      <h3>單檔或整個資料夾匯入</h3>
-      <p>可選單一 <code>.inf</code>，或遞迴掃描整個資料夾。</p>
-    </div>
-
-    <div class="card">
-      <h3>重複偵測</h3>
-      <p>匯入前比對已安裝的驅動，由你決定覆寫或略過。</p>
-    </div>
-
-    <div class="card">
-      <h3>深色介面</h3>
-      <p>兩個分頁：匯出驅動、匯入驅動。</p>
-    </div>
-
-    <div class="card">
-      <h3>自動要求系統管理員</h3>
-      <p>執行檔內嵌 manifest，啟動時要求提升權限。</p>
-    </div>
-
-  </div>
-
-  <div class="note">
-    本工具直接操作 Windows 驅動程式存放區，
-    適合進階使用者與 IT 管理員，請謹慎使用。
-  </div>
-
-</main>
-
-<footer>
-  MIT 授權條款 · 僅支援 Windows 10 / 11 ·
-  <a href="https://github.com/neil289506-commits/DriverBackup">GitHub</a>
-</footer>
-
-<script src="js/main.js"></script>
-
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>首頁 · DriverBackup</title><meta name="description" content="Windows 桌面工具,匯出與匯入第三方裝置驅動程式,以 Rust 與 egui 製作"><link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body data-repo="neil289506-commits/DriverBackup"><canvas id="bg" data-mode="grid"></canvas><div class="vignette"></div><div class="glow"></div>
+<nav><a class="logo" href="index.html"><img src="assets/logo.svg" alt="">DriverBackup</a><a class="l on" href="index.html">首頁</a><a class="l" href="usage.html">使用方式</a><a class="l" href="how.html">運作原理</a><a class="l" href="build.html">建置</a><a class="gh" href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">GitHub ↗</a><a class="dl" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 最新版 <span class="vt" data-tag></span></a></nav>
+<section class="hero"><span class="badge"><i></i>Windows 驅動備份工具 · Open Source</span><h1>DriverBackup<br>換系統不心慌,<span class="g">驅動一鍵備份還原</span></h1><p class="lead">使用系統內建的 <code>pnputil.exe</code> 備份驅動程式存放區,並從 <code>.inf</code> 還原。以 Rust 與 egui 製作。</p><div class="cta"><a class="btn p" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 下載最新版 <small data-tag></small></a><a class="btn" href="usage.html">📖 使用方式</a><a class="btn" href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">★ GitHub</a></div><div class="stats"><div><b>pnputil</b><span>系統內建引擎</span></div><div><b>2</b><span>個分頁:匯出 / 匯入</span></div><div><b>MIT</b><span>開源授權</span></div></div></section>
+<div class="marquee"><div><span>Rust</span><span>egui</span><span>pnputil</span><span>.inf</span><span>sys.session</span><span>winres</span><span>LTO</span><span>msjh.ttf</span><span>Windows 10</span><span>Windows 11</span><span>Admin</span><span>MIT</span><span>Rust</span><span>egui</span><span>pnputil</span><span>.inf</span><span>sys.session</span><span>winres</span><span>LTO</span><span>msjh.ttf</span><span>Windows 10</span><span>Windows 11</span><span>Admin</span><span>MIT</span></div></div>
+<section id="try"><h2 class="reveal">試玩:模擬匯出 / 匯入</h2><p class="sub reveal">切換分頁,按下開始,看看實際會呼叫哪些 pnputil 指令(示意資料)。</p><div class="panel reveal" id="demo">
+<div class="tabs"><button class="tab on" data-m="e">匯出驅動</button><button class="tab" data-m="i">匯入驅動</button></div>
+<p style="color:var(--mut)" id="dd"></p>
+<div class="dm-row" style="margin:14px 0"><button class="btn p s" id="go"></button><span id="st" style="color:var(--mut)"></span></div>
+<div class="bar"><i id="pb"></i></div>
+<pre id="lg" style="height:200px;margin-top:14px"></pre>
+</div></section>
+<section><h2 class="reveal">核心功能</h2><p class="sub reveal">一眼看懂 DriverBackup 能做什麼。</p><div class="grid"><div class="card reveal"><div class="ic">📤</div><h3>匯出全部第三方驅動</h3><p>一次匯出到你選的資料夾。</p></div><div class="card reveal"><div class="ic">📝</div><h3>sys.session 紀錄</h3><p>記錄 Windows 版本、匯出時間、驅動總數與完整清單。</p></div><div class="card reveal"><div class="ic">📥</div><h3>單檔或整個資料夾匯入</h3><p>可選單一 <code>.inf</code>,或遞迴掃描整個資料夾。</p></div><div class="card reveal"><div class="ic">🔍</div><h3>重複偵測</h3><p>匯入前比對已安裝的驅動,由你決定覆寫或略過。</p></div><div class="card reveal"><div class="ic">🌙</div><h3>深色介面</h3><p>兩個分頁:匯出驅動、匯入驅動。</p></div><div class="card reveal"><div class="ic">🛡</div><h3>自動要求系統管理員</h3><p>執行檔內嵌 manifest,啟動時要求提升權限。</p></div></div><div class="note reveal">本工具直接操作 Windows 驅動程式存放區,適合進階使用者與 IT 管理員,請謹慎使用。</div><div class="cta" style="margin-top:34px"><a class="btn" href="usage.html">了解更多 →</a></div></section>
+<section><div class="panel reveal" style="text-align:center;padding:60px 28px"><h2>準備好了嗎?</h2><p class="sub" style="margin:0 auto 24px">直接下載最新版本,或自行從原始碼建置。</p><div class="cta" style="justify-content:center"><a class="btn p" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 下載最新版 <small data-tag></small></a><a class="btn" href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">前往 GitHub</a></div></div></section>
+<footer><div class="g">DriverBackup</div><p>MIT 授權條款 · 僅支援 Windows 10 / 11 · 由 neil289506-commits 開發</p><p><a href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">原始碼</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">最新版本</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases" target="_blank" rel="noopener">所有 Releases</a></p></footer>
+<script src="js/fx.js"></script><script src="js/demo.js"></script></body></html>

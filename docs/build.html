@@ -1,9 +1,9 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>建置 – DriverBackup</title><meta name="description" content="Windows 驅動程式匯出／匯入工具，使用內建 pnputil.exe，以 Rust 與 egui 製作"><link rel="stylesheet" href="css/style.css"></head><body>
-<header><nav><a class="brand" href="index.html">💾 DriverBackup</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="how.html">運作原理</a><a href="build.html">建置</a></nav></header><main>
-<h1>建置</h1><p>需要 Rust 工具鏈與 Cargo，目標平台為 Windows。</p>
-<pre><code>cargo build --release
-.\target\release\driver_backup.exe</code></pre>
-<p>相依套件：eframe / egui 0.27、rfd、chrono、walkdir、winreg。建置時 <code>build.rs</code> 會用 winres 嵌入要求系統管理員的 manifest；release 設定為 LTO 並移除符號。介面字型使用 repo 內的 <code>msjh.ttf</code>（微軟正黑體）。</p>
-<p>repo 預設分支為 <code>V1.0</code>，另有 <code>V1.0-Noico</code> 標籤。</p>
-</main><footer>MIT 授權條款 · 僅支援 Windows 10 / 11 · <a href="https://github.com/neil289506-commits/DriverBackup">GitHub</a></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>建置 · DriverBackup</title><meta name="description" content="Windows 桌面工具,匯出與匯入第三方裝置驅動程式,以 Rust 與 egui 製作"><link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body data-repo="neil289506-commits/DriverBackup"><canvas id="bg" data-mode="grid"></canvas><div class="vignette"></div><div class="glow"></div>
+<nav><a class="logo" href="index.html"><img src="assets/logo.svg" alt="">DriverBackup</a><a class="l" href="index.html">首頁</a><a class="l" href="usage.html">使用方式</a><a class="l" href="how.html">運作原理</a><a class="l on" href="build.html">建置</a><a class="gh" href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">GitHub ↗</a><a class="dl" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 最新版 <span class="vt" data-tag></span></a></nav>
+<section class="page-h"><span class="badge"><i></i>Build</span><h1 style="font-size:clamp(2.2rem,5vw,4rem);margin-top:16px"><span class="g">下載與</span>建置</h1><p class="lead">需要 Rust 工具鏈與 Cargo,目標平台為 Windows。</p></section>
+<section style=padding-top:20px><h2 class="reveal">最新版本</h2><div class="panel reveal" id="rel"><h3>最新版本 <span class="tag vt" data-tag></span></h3><p style="margin-bottom:14px"><span data-date></span></p><div class="cta" data-assets style="margin:0 0 16px"></div><a class="btn p" data-dl href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">⬇ 前往最新 Release</a> <a class="btn" href="https://github.com/neil289506-commits/DriverBackup/releases" target="_blank" rel="noopener">所有版本</a></div></section><section><h2 class="reveal">自行建置</h2><div class="panel reveal"><pre>cargo build --release
+.\target\release\driver_backup.exe</pre><p>相依套件:eframe / egui 0.27、rfd、chrono、walkdir、winreg。建置時 <code>build.rs</code> 會用 winres 嵌入要求系統管理員的 manifest;release 設定為 LTO 並移除符號。介面字型使用 repo 內的 <code>msjh.ttf</code>(微軟正黑體)。</p><p>repo 預設分支為 <code>V1.0</code>,另有 <code>V1.0-Noico</code> 標籤。</p></div></section>
+<footer><div class="g">DriverBackup</div><p>MIT 授權條款 · 僅支援 Windows 10 / 11 · 由 neil289506-commits 開發</p><p><a href="https://github.com/neil289506-commits/DriverBackup" target="_blank" rel="noopener">原始碼</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases/latest" target="_blank" rel="noopener">最新版本</a> · <a href="https://github.com/neil289506-commits/DriverBackup/releases" target="_blank" rel="noopener">所有 Releases</a></p></footer>
+<script src="js/fx.js"></script></body></html>
